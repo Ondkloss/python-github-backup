@@ -1,0 +1,28 @@
+name: automatic-release
+
+on:
+    workflow_dispatch:
+        inputs:
+            release_type:
+                description: Release type
+                required: true
+                type: choice
+                options:
+                    - patch
+                    - minor
+                    - major
+
+jobs:
+    release:
+        name: release
+        runs-on: ubuntu-20.04
+        steps:
+            - name: install prerequisites
+              run: python install -r release-requirements.txt
+            - name: execute release
+              env:
+                SEMVER_BUMP: ${{ github.event.inputs.release_type }}
+                TWINE_REPOSITORY: ${{ env.TWINE_REPOSITORY || 'pypi' }}
+                TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
+                TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+              run: ./release $SEMVER_BUMP

@@ -19,6 +19,10 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+            - name: Setup Git
+              run: |
+                git config --local user.email "action@github.com"
+                git config --local user.name "GitHub Action"
             - name: Setup Python
               uses: actions/setup-python@v4
               with:

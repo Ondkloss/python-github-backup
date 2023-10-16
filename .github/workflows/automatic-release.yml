@@ -22,7 +22,7 @@ jobs:
             - name: execute release
               env:
                 SEMVER_BUMP: ${{ github.event.inputs.release_type }}
-                TWINE_REPOSITORY: ${{ env.TWINE_REPOSITORY || 'pypi' }}
+                TWINE_REPOSITORY: ${{ env.TWINE_REPOSITORY_URL }}
                 TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
                 TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
               run: ./release $SEMVER_BUMP

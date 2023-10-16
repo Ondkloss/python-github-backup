@@ -27,7 +27,7 @@ def open_file(fname):
 
 
 setup(
-    name="github-backup",
+    name="ondkloss-github-backup",
     version=__version__,
     author="Jose Diaz-Gonzalez",
     author_email="github-backup@josediazgonzalez.com",

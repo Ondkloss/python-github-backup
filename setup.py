@@ -31,7 +31,7 @@ setup(
     version=__version__,
     author="Jose Diaz-Gonzalez",
     author_email="github-backup@josediazgonzalez.com",
-    packages=["github_backup"],
+    packages=["ondkloss_github_backup"],
     scripts=["bin/github-backup"],
     url="http://github.com/josegonzalez/python-github-backup",
     license="MIT",

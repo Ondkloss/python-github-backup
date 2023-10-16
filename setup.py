@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-from github_backup import __version__
+from ondkloss_github_backup import __version__
 
 try:
     from setuptools import setup

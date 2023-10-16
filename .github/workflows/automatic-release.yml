@@ -14,12 +14,18 @@ on:
 
 jobs:
     release:
-        name: release
+        name: Release
         runs-on: ubuntu-20.04
         steps:
-            - name: install prerequisites
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.8'
+            - name: Install prerequisites
               run: pip install -r release-requirements.txt
-            - name: execute release
+            - name: Execute release
               env:
                 SEMVER_BUMP: ${{ github.event.inputs.release_type }}
                 TWINE_REPOSITORY: ${{ env.TWINE_REPOSITORY_URL }}

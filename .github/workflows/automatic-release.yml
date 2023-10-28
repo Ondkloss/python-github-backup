@@ -23,6 +23,14 @@ jobs:
               run: |
                 git config --local user.email "action@github.com"
                 git config --local user.name "GitHub Action"
+            - name: Print Python version
+              run: python --version
+            - name: Setup Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: '3.8'
+            - name: Print Python version
+              run: python --version
             - name: Install prerequisites
               run: pip install -r release-requirements.txt
             - name: Execute release

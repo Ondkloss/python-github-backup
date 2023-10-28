@@ -1,9 +1,10 @@
 Changelog
 =========
 
-0.44.0 (2023-10-16)
+0.44.1 (2023-10-28)
 -------------------
 ------------------------
-- Modification. [Halvor Holsten Strand]
+- Attempt workflow without setup-python, for demo purposes. [Halvor
+  Holsten Strand]
 
 

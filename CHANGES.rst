@@ -1,9 +1,9 @@
 Changelog
 =========
 
-0.44.3 (2023-10-28)
+0.44.4 (2023-10-29)
 -------------------
 ------------------------
-- Newest LTS test. [Halvor Holsten Strand]
+- Gitchangelog check. [Halvor Holsten Strand]
 
 

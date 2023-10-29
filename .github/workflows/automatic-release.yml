@@ -33,6 +33,8 @@ jobs:
               run: python --version
             - name: Install prerequisites
               run: pip install -r release-requirements.txt
+            - name: Print gitchangelog
+              run: gitchangelog
             - name: Execute release
               env:
                 SEMVER_BUMP: ${{ github.event.inputs.release_type }}
